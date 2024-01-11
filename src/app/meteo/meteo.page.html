@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>meteo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-toolbar>
+    <ion-title size="large">Meteo of Rabat</ion-title>
+  </ion-toolbar>
+
+  <ion-content class="ion-padding">
+    <h1 *ngIf="temperature">Temperature : {{ temperature }}</h1>
+    <h2 *ngIf="pressure">Pressure : {{ pressure }}</h2>
+    <h3 *ngIf="humidity">Humidity : {{ humidity }}</h3>
+    <h4 *ngIf="country">Country : {{ country }}</h4>
+    <h4 *ngIf="city">City : {{ city }}</h4>
+  </ion-content>
+
+  <ion-button (click)="getMeteo()">Get Meteo of Rabat</ion-button>
+</ion-content>
+
+

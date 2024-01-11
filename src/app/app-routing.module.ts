@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'meteo',
+    loadChildren: () => import('./meteo/meteo.module').then( m => m.MeteoPageModule)
+  },
 ];
 
 @NgModule({
